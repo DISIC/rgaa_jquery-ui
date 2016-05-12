@@ -1,0 +1,15 @@
+{
+  "name": "rgaa_jquery-ui",
+  "version": "1.0.0",
+  "description": "Accessible jQueryUI components.",
+  "author": "Simon Bonaventure <simon@vtech.fr>",
+  "license": "MIT",
+  "main": "dist/rgaa_jquery-ui.js",
+  "scripts": {
+    "build": "webpack",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.15"
+  }
+}
