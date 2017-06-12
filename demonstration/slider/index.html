@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Slider - jQuery UI Components - V-Technologies - RGAA3</title>
+	<link href="../../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+	<link href="../../node_modules/jquery-ui/themes/base/all.css" rel="stylesheet" />
+	<style>
+		#slider, #slidervertical {
+			margin: 20px;
+		}
+		*:focus {
+			border : 2px solid red !important;
+		}
+		.navbar {
+			background: #2868C9;
+		}
+	</style>
+</head>
+<body>
+	<header role="banner">
+		<nav class="navbar navbar-dark">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="../index.html" class="navbar-brand">Accueil des tests JQuery-ui</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="row">
+		<div class="container">
+			<h1>jQuery UI components</h1>
+
+			<p class="alert alert-info">
+				{
+					"jquery": "^3.1.1",
+					"jquery-ui": "^1.12.1"
+				}
+			</p>
+
+			<!-- Slider -->
+			<h2 class="demoHeaders">Sliders</h2>
+			<p><a href="http://api.jqueryui.com/slider/">http://api.jqueryui.com/slider/</a></p>
+
+			<div id="slider"></div>
+
+			<div id="slidervertical"></div>
+
+			<p>Du contenu avec un <a href="#">lien</a> après le composant</p>
+
+		</div>
+	</div>
+
+
+	<script src="../../node_modules/jquery/dist/jquery.js"></script>
+	<script src="../../node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
+	<script type="text/javaScript">
+		$( "#slider" ).slider();
+
+		$( "#slidervertical" ).slider({
+    		orientation: "vertical"
+		});
+	</script>
+</body>
+</html>

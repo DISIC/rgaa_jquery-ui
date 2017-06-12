@@ -14,16 +14,20 @@ $.widget( 'ui.slider', $.ui.slider, {
 		this.handles.each(function(index) {
 			//Set constant attribut
 			attrHandle = {
-				'role':'slider',
-				'aria-valuemin':options.min,
-				'aria-valuemax':options.max,
+				'role'	: 'slider',
+				'aria-valuemin'	: options.min,
+				'aria-valuemax'	: options.max,
 			};
+
+			if(options.orientation === "vertical") {
+				attrHandle['aria-orientation'] =  'vertical';
+			}
 
 			if (typeof(options.label[index] !== typeof undefined)) {
 				if(jQuery.type(options.label[index]) === 'string') {
 					attrHandle.title =  options.label[index];
-				}else if(jQuery.type(options.label[index]) === 'object' && options.label[index].length > 0){
-					attrHandle['aria-labelledby'] =  options.label[index][0].id;
+				}else if(jQuery.type(options.label[index]) === 'object' && options.label.length > 0){
+					attrHandle['aria-labelledby'] =  options.label[0].id;
 				}
 			}
 			$(this).attr(attrHandle);

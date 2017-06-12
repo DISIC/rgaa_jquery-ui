@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Composant Accordion corrigé - JqueryUi - SGMAP</title>
+	<link href="../../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+	<link href="../../node_modules/jquery-ui/themes/base/all.css" rel="stylesheet" />
+	<style>
+		*:focus {
+			border : 2px solid red !important;
+		}
+		*:before,
+		*:after {
+		  display: block;
+		  background: #f2f2f2;
+		  font-weight: bold;
+		  font-size: 100%;
+		  font-size: 1rem;
+		}
+		.navbar {
+			background: #2868C9;
+		}
+		[aria-expanded="true"]:before {
+			color: green;
+			content: '[aria-expended="true"]';
+		}
+		[aria-expanded="false"]:before {
+			color: red;
+			content: '[aria-expended="false"]';
+		}
+	</style>
+</head>
+<body>
+	<header role="banner">
+		<nav class="navbar navbar-dark">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="../index.html" class="navbar-brand">Accueil des tests JQuery-ui</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="row">
+		<div class="container">
+			<h1>jQuery UI components</h1>
+
+			<p class="alert alert-info">
+				{
+					"jquery": "^3.1.1",
+					"jquery-ui": "^1.12.1"
+				}
+			</p>
+
+			<!-- Accordion -->
+			<h2 class="demoHeaders">Accordion (version corrigée)</h2>
+			<p><a href="http://api.jqueryui.com/accordion/">http://api.jqueryui.com/accordion</a></p>
+
+			<div id="accordion">
+				<h3>First</h3>
+				<div>
+					<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+						<br /><br /><a href="#">link</a><br /><br />
+						<input type="button" id="btn3"  value="button panel 1">
+					</p>
+				</div>
+				<h3>Second</h3>
+				<div>
+					<p>
+						Phasellus mattis tincidunt nibh.
+						<br /><br /><input type="button" id="btn4"  value="button panel 1">
+					</p>
+				</div>
+				<h3>Third</h3>
+				<div>
+					<p>Nam dui erat, auctor a, dignissim quis.</p>
+				</div>
+			</div>
+
+			<p>Du contenu avec un <a href="#">lien</a> après le composant</p>
+
+		</div>
+	</div>
+	<script src="../../node_modules/jquery/dist/jquery.js"></script>
+	<script src="../../node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
+	<script src="../../dist/rgaa_jquery-ui.js"></script>
+	<script type="text/javascript">
+		/* global jQuery:false */
+		(function ($) {
+			'use strict';
+
+			$( '#accordion' ).accordion({
+				collapsible: true
+			});
+
+		}(jQuery));
+	</script>
+</body>
+</html>

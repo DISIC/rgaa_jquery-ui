@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Composant Menu d'origine - JqueryUi - SGMAP</title>
+	<link href="../../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+	<link href="../../node_modules/jquery-ui/themes/base/all.css" rel="stylesheet" />
+	<style>
+		#menu {
+			width: 200px;
+		}
+		*:focus {
+			border : 2px solid red !important;
+		}
+		.navbar {
+			background: #2868C9;
+		}
+	</style>
+</head>
+<body>
+	<header role="banner">
+		<nav class="navbar navbar-dark">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="../index.html" class="navbar-brand">Accueil des tests JQuery-ui</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="row">
+		<div class="container">
+			<h1>jQuery UI components</h1>
+
+			<p class="alert alert-info">
+				{
+					"jquery": "^3.1.1",
+					"jquery-ui": "^1.12.1"
+				}
+			</p>
+
+		<!-- Slider -->
+		<h2 class="demoHeaders">Menu</h2>
+		<p><a href="http://api.jqueryui.com/menu/">http://api.jqueryui.com/menu/</a></p>
+
+		<ul id="menu">
+			<li class="ui-state-disabled"><div>Toys (n/a)</div></li>
+			<li><div>Books</div></li>
+			<li><div>Clothing</div></li>
+			<li><div>Electronics</div>
+				<ul>
+					<li class="ui-state-disabled"><div>Home Entertainment</div></li>
+					<li><div>Car Hifi</div></li>
+					<li><div>Utilities</div></li>
+				</ul>
+			</li>
+			<li><div>Movies</div></li>
+			<li><div>Music</div>
+				<ul>
+					<li><div>Rock</div>
+						<ul>
+							<li><div>Alternative</div></li>
+							<li><div>Classic</div></li>
+						</ul>
+					</li>
+					<li><div>Jazz</div>
+						<ul>
+							<li><div>Freejazz</div></li>
+							<li><div>Big Band</div></li>
+							<li><div>Modern</div></li>
+						</ul>
+					</li>
+					<li><div>Pop</div></li>
+				</ul>
+			</li>
+			<li class="ui-state-disabled"><div>Specials (n/a)</div></li>
+		</ul>
+		<p>Du contenu avec un <a href="#">lien</a> après le composant</p>
+	</div>
+</div>
+	<script src="../../node_modules/jquery/dist/jquery.js"></script>
+	<script src="../../node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
+<script type="text/javaScript">
+	$( "#menu" ).menu();
+</script>
+</body>
+</html>

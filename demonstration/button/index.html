@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Composant Button d'origine - JqueryUi - SGMAP</title>
+	<link href="../../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+	<link href="../../node_modules/jquery-ui/themes/base/all.css" rel="stylesheet" />
+	<style>
+		*:focus {
+			border : 2px solid red !important;
+		}
+		.navbar {
+			background: #2868C9;
+		}
+	</style>
+</head>
+<body>
+	<header role="banner">
+		<nav class="navbar navbar-dark">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="../index.html" class="navbar-brand">Accueil des tests JQuery-ui</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="row">
+		<div class="container">
+			<h1>jQuery UI components</h1>
+
+			<p class="alert alert-info">
+				{
+					"jquery": "^3.1.1",
+					"jquery-ui": "^1.12.1"
+				}
+			</p>
+
+			<!-- Slider -->
+			<h2 class="demoHeaders">Button</h2>
+
+
+			button : <button id="cbutton">A button element</button>
+			<br><br>
+			disabled button : <button id="dbutton">A disabled button element</button>
+			<br>
+			<form style="margin-top: 1em;">
+				Radio button :
+				<div id="radioset">
+					<input type="radio" id="radio1" name="radio"><label for="radio1">Choice 1</label>
+					<input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Choice 2</label>
+					<input type="radio" id="radio3" name="radio"><label for="radio3">Choice 3</label>
+				</div>
+				<br>
+				checkbox button :
+				<div id="format">
+					<input type="checkbox" id="check1"><label for="check1">B</label>
+					<input type="checkbox" id="check2"><label for="check2">I</label>
+					<input type="checkbox" id="check3"><label for="check3">U</label>
+				</div>
+			</form>
+
+
+			<p>Du contenu avec un <a href="#">lien</a> après le composant</p>
+
+		</div>
+	</div>
+	<script src="../../node_modules/jquery/dist/jquery.js"></script>
+	<script src="../../node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
+	<script type="text/javaScript">
+		$( "#check" ).button();
+		$( "#format" ).buttonset();
+		$( "#radioset" ).buttonset();
+		$( "#cbutton" ).button();
+		$( "#dbutton" ).button({disabled: true });
+	</script>
+</body>
+</html>

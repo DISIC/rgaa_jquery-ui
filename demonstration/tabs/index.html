@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Composant Tabs d'origine - JqueryUi - SGMAP</title>
+	<link href="../../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+	<link href="../../node_modules/jquery-ui/themes/base/all.css" rel="stylesheet" />
+	<style>
+		*:focus {
+			border : 2px solid red !important;
+		}
+		.navbar {
+			background: #2868C9;
+		}
+	</style>
+</head>
+<body>
+	<header role="banner">
+		<nav class="navbar navbar-dark">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="../index.html" class="navbar-brand">Accueil des tests JQuery-ui</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="row">
+		<div class="container">
+			<h1>jQuery UI components</h1>
+
+			<p class="alert alert-info">
+				{
+					"jquery": "^3.1.1",
+					"jquery-ui": "^1.12.1"
+				}
+			</p>
+
+			<!-- Tabs -->
+			<h2 class="demoHeaders">Tabs</h2>
+			<p><a href="http://api.jqueryui.com/tabs/">http://api.jqueryui.com/tabs/</a></p>
+
+			<div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">First</a></li>
+					<li><a href="#tabs-2">Second</a></li>
+					<li><a href="#tabs-3">Third</a></li>
+				</ul>
+				<div id="tabs-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					<br><br><a href="#">link</a><br><br>
+					<input type="button" id="btn"  value="button panel 1">
+				</div>
+				<div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.
+					<br><br>	<input type="button" id="btn2"  value="button panel 2">
+				</div>
+				<div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+			</div>
+
+			<p>Du contenu avec un <a href="#">lien</a> après le composant</p>
+
+		</div>
+	</div>
+	<script src="../../node_modules/jquery/dist/jquery.js"></script>
+	<script src="../../node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
+	<script type="text/javaScript">
+		$( "#tabs" ).tabs();
+	</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Composant Autocomplete partiellement corrigé - JqueryUi - SGMAP</title>
+	<link href="../../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+	<link href="../../node_modules/jquery-ui/themes/base/all.css" rel="stylesheet" />
+	<style>
+		#slider, #slider2 {
+			margin: 20px;
+		}
+		*:focus {
+			border : 2px solid red !important;
+		}
+		.navbar {
+			background: #2868C9;
+		}
+	</style>
+</head>
+<body>
+	<header role="banner">
+		<nav class="navbar navbar-dark">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="../index.html" class="navbar-brand">Accueil des tests JQuery-ui</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="row">
+		<div class="container">
+			<h1>jQuery UI components</h1>
+
+			<p class="alert alert-info">
+				{
+					"jquery": "^3.1.1",
+					"jquery-ui": "^1.12.1"
+				}
+			</p>
+
+			<!-- Slider -->
+			<h2 class="demoHeaders">Autocomplete</h2>
+			<p><a href="http://api.jqueryui.com/autocomplete/">http://api.jqueryui.com/autocomplete</a></p>
+
+			<div>
+				<input id="autocomplete" >
+			</div>
+
+			<p>Du contenu avec un <a href="#">lien</a> après le composant</p>
+		</div>
+	</div>
+	<script src="../../node_modules/jquery/dist/jquery.js"></script>
+	<script src="../../node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
+	<script src="../../dist/rgaa_jquery-ui.js"></script>
+	<script type="text/javascript">
+		/* global jQuery:false */
+		(function ($) {
+			'use strict';
+
+			var availableTags = [
+				'ActionScript',
+				'AppleScript',
+				'Asp',
+				'BASIC',
+				'C',
+				'C++',
+				'Clojure',
+				'COBOL',
+				'ColdFusion',
+				'Erlang',
+				'Fortran',
+				'Groovy',
+				'Haskell',
+				'Java',
+				'JavaScript',
+				'Lisp',
+				'Perl',
+				'PHP',
+				'Python',
+				'Ruby',
+				'Scala',
+				'Scheme'
+			];
+
+			$( '#autocomplete' ).autocomplete({
+				source: availableTags
+			});
+
+		}(jQuery));
+	</script>
+</body>
+</html>
