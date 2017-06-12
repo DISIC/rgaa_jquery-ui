@@ -2,7 +2,7 @@
   "name": "rgaa_jquery-ui",
   "version": "2.0.0",
   "description": "Accessible jQueryUI components.",
-  "author": "Simon Bonaventure <simon@vtech.fr>",
+  "author": "Etat Plateforme <rgaa.sgmap@modernisation.gouv.fr>",
   "license": "CC-BY 2.0",
   "main": "dist/rgaa_jquery-ui.js",
   "scripts": {
