@@ -2,7 +2,7 @@
 
 Corrections d'accessibilité sur les composants jQueryUI.
 
-[Tutoriel sur la mise en accessibilité](https://disic.github.io/rgaa_bibliotheques_javascript/tutoriels/jquery-ui.html)
+[Tutoriel sur la mise en accessibilité](https://disic.github.io/rgaa_bibliotheques-javascript/tutoriels/jquery-ui.html)
 
 ## Installation
 
